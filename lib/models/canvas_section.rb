@@ -12,7 +12,7 @@ class CanvasSection < Forgery
 
   def self.random(course=1)
     d = Forgery('date').date
-    Section.new(
+    CanvasSection.new(
       {
         name: "#{Forgery('address').country} #{Forgery('basic').color}",
         sis_id: (21000+rand(1000000)),

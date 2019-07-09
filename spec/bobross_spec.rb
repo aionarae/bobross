@@ -1,30 +1,33 @@
+require 'bobross'
+include Bobross
+
 RSpec.describe Bobross do
   it "has a version number" do
     expect(Bobross::VERSION).not_to be nil
   end
 
   it "creates a random account" do
-    a = Bobross::Account.random
+    a = CanvasAccount.random
     expect(a.name.nil?).to eq(false)
   end
 
   it "creates a random assignment" do
-    a = Assignment.random
+    a = CanvasAssignment.random
     expect(a.name.nil?).to eq(false)
   end
 
   it "creates  a random course" do
-    a = Course.random
+    a = CanvasCourse.random
     expect(a.name.nil?).to eq(false)
   end
 
   it "creates a random section" do
-    a = Section.random
+    a = CanvasSection.random
     expect(a.name.nil?).to eq(false)
   end
 
   it "creates a random user" do
-    a = User.random
+    a = CanvasUser.random
     expect(a.name.nil?).to eq(false)
   end
 
